@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRouter from "./routes/auth.route";
 import todoRouter from "./routes/todo.route";
+import productRouter from "./routes/product.route";
 dotenv.config();
 
 const port = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ app.get("/", async (req: Request, res: Response) => {
 });
 app.use("/auth", authRouter);
 app.use("/todo",todoRouter)
+app.use("/product",productRouter)
 
 app.listen(port, () => {
   console.log(`💻[server]: Server is running at http://localhost:${port}`);
