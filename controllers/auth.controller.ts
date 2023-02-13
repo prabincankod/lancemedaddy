@@ -33,7 +33,7 @@ const signUp = async (req: Request, res: Response) => {
   }
 };
 const login = async (req: Request, res: Response) => {
-  console.log('nice')
+  console.log("nice");
   const { email, password } = req.body;
   try {
     const user = await prismaClient.user.findUnique({

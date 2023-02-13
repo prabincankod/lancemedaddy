@@ -15,8 +15,8 @@ app.get("/", async (req: Request, res: Response) => {
   res.status(200).json({ message: "alive" });
 });
 app.use("/auth", authRouter);
-app.use("/todo",todoRouter)
-app.use("/product",productRouter)
+app.use("/todo", todoRouter);
+app.use("/product", productRouter);
 
 app.listen(port, () => {
   console.log(`💻[server]: Server is running at http://localhost:${port}`);
