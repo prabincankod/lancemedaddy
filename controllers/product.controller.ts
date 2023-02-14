@@ -47,7 +47,7 @@ const updateProduct = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { price, name } = req.body;
-    if (!id || !price || !name) {
+    if (!id ) {
       return res.status(400).send("Please provide all the required fields");
     }
     const product = await prismaClient.product.update({
